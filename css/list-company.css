@@ -1,0 +1,111 @@
+/* ////////////// List-Company ////////////////// */
+
+/* ========================== */
+
+.column1 img {
+  width: auto;
+  height: 48px;
+  float: center;
+  margin: 5px;
+  max-width: 70px;
+  border-radius: 5px;
+}
+
+.column2 a, .column5 a { 
+  color: #ddd;
+  font-weight: bold;
+  text-decoration-color: red;
+}
+.column2 a:hover, .column5 a:hover {
+  color: red;
+  font-weight: bold;
+}
+
+/* ========================= */
+.column1 {
+  width: 8%;
+  padding-left: 10px;
+   
+  
+}
+
+.column2, .column3 {
+  width: 28%;
+  text-align: left;
+}
+ 
+.column4, .column5 {
+  width: 18%;
+  text-align: left;
+}
+
+
+
+@media screen and (max-width: 992px) {
+  table {
+    display: block;
+  }
+  table > *, table tr, table td, table th {
+    display: block;
+  }
+  table thead {
+    display: none;
+  }
+  table tbody tr {
+    height: auto;
+    padding: 37px 0 10px 0;
+  }
+  table tbody tr td {
+    padding-left: 40% !important;
+    margin-bottom: 24px;
+    min-height: 25px;
+  }
+  
+  table tbody tr td:before {    
+    font-size: 14px;
+    color: #fff;
+    line-height: 1.2;
+    position: absolute;
+    width: 40%;
+    left: 30px;
+    top: 0;
+  }
+
+  table tbody tr td:nth-child(2):before {
+    content: "NAME/ACTIVITES";
+  }
+  table tbody tr td:nth-child(3):before {
+    content: "ADDRESS";
+  }
+  table tbody tr td:nth-child(4):before {
+    content: "PHONE/FAX/TELEX";
+  }
+  table tbody tr td:nth-child(5):before {
+    content: "EMAIL/WEBSITE";    
+  }  
+  
+  
+  .column1,
+  .column2,
+  .column3,
+  .column4,
+  .column5 {
+    text-align: left;
+    width: 100%;
+  }
+
+  
+  tbody tr {
+    font-size: 14px;
+  }
+
+
+
+  .column1 {
+    display: none;
+  }
+   
+}
+
+
+

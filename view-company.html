@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>View-Company</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+
+    <script src="bootstrap/jquery.min.js"></script>
+    <script src="bootstrap/popper.min.js"></script>
+    <script src="bootstrap/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="css/template-style.css">
+    <link rel="stylesheet" href="css/view-style.css">
+
+    <script src="js/template-style.js"></script>
+
+
+</head>
+
+<body>
+    <!-- ===================== Navbar ========================== -->
+    <nav class="navbar navbar-expand-md navbar-dark" style="background-color: #0000003F; border-bottom: 2px solid #8F0000;">
+        <a href="index.html" class="navbar-brand title">SKOLARIKOS MARITIME DATA-BANK</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar3">
+     		<span class="navbar-toggler-icon"></span>
+    	</button>
+        <div class="navbar-collapse collapse justify-content-stretch" id="navbar3">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="list-fleet.html" style="color: white; font-size: 18px;"><i class="fa fa-fw fa-ship"></i> Fleet</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="list-yacht.html" style="color: white; font-size: 18px;"><i class="fa fa-fw fa-ship"></i> Yacht</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="list-company.html" style="color: white; font-size: 18px;"><i class="fa fa-fw fa-building"></i> Company</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="list-contact.html" style="color: white; font-size: 18px;"><i class="fa fa-fw fa-address-card"></i> Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color: white; font-size: 18px;" id="myLogout"><i class="fa fa-fw fa-user"></i> Logout</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+    <div class="path"><i class="fa fa-home"></i> / Company / View</div>
+
+    <div class="container-fluid">
+        <!-- ============== Header ============== -->
+        <div class="container-custom">
+            <div class="header">
+                <div class="row">
+                    <div class="col-md-8">
+                        <i class="fa fa-building avatar"></i>
+                        <h2> 3D MARINE USA INC/PSYDEN (UK) LTD.</h2>
+                    </div>
+                    <div class="col-md-4">
+                        <button class="btn"><i class="fa fa-undo"></i> Back</button>
+                    </div>
+                </div>
+            </div>
+            <hr style="background: #aaa;">
+        </div>
+
+        <!-- =========== Main =============== -->
+        <div class="container-custom">
+            <div class="main">
+                <div class="row">
+                    <div class="col-lg-2">
+                        <img src="img/company/default.png">
+                        <br>
+                        <br>
+
+                    </div>
+
+                    <div class="col-lg-10">
+                        <!-- ========= Company Details ============== -->
+                        <h3> Company Details</h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Address</label>
+                                <p>Chatham Docks, Gillingham Docks, Chatham, Kent ME4 4SW, </p>
+                            </div>
+                            <div class="col-md-6">
+                                <label>Activities</label>
+                                <p>Various Services, Spare Parts/Equipment, Shipyards/Ship Repairers</p>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>City</label>
+                                <p>Chatham eng.</p>
+                            </div>
+                            <div class="col-md-6">
+                                <label>Phone</label>
+                                <p>(0)845 274 7687 </p>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Fax</label>
+                                <p>(0) 191 430 8661</p>
+                            </div>
+                            <div class="col-md-6">
+                                <label>Telex</label>
+                                <p>21275 apafun g </p>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Email</label>
+                                <a href="#">
+                                    <p>info@ap-group.co.uk</p>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <label>Website</label>
+                                <a href="#">
+                                    <p>http://www.ap-group.co.uk/</p>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label>Profile</label>
+                                <p></p>
+                            </div>
+                        </div>
+
+                        <hr style="background: #aaa;">
+                        <!-- ========= Staff / Executives ============== -->
+                        <h3>Staff / Executives</h3>
+                        <div class="wrap-table100" style="display: block;" id="myTable">
+                            <div class="table100">
+                                <table clsss="table">
+                                    <thead>
+                                        <tr>
+                                            <th class="column1" style="padding-left: 30px;">NAME</th>
+                                            <th class="column2" style="padding-left: 30px;">JOB TITLE</th>
+                                            <th class="column3" style="padding-left: 30px;">DEPARTMENT</th>
+                                            <th class="column4">PHONE</th>
+                                            <th class="column5">FAX</th>
+                                            <th class="column6">EMAIL</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="column1"><a href="#">Ion Dumitrache</a></td>
+                                            <td class="column2"> </td>
+                                            <td class="column3"> </td>
+                                            <td class="column4"> +12 345 6789</td>
+                                            <td class="column5"> 0 198736</td>
+                                            <td class="column6"> example@mail.com</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="column1"><a href="#">Laurentiu Firulescu</a></td>
+                                            <td class="column2"> President</td>
+                                            <td class="column3"> </td>
+                                            <td class="column4"> +12 345 6789</td>
+                                            <td class="column5"> 0 198736</td>
+                                            <td class="column6"> example@mail.com</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="column1"><a href="#">Daniela Roman</a></td>
+                                            <td class="column2"> Marketing manager</td>
+                                            <td class="column3"> </td>
+                                            <td class="column4"> +12 345 6789</td>
+                                            <td class="column5"> 0 198736</td>
+                                            <td class="column6"> example@mail.com</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="column1"><a href="#">Laurentiu Firulescu</a></td>
+                                            <td class="column2"> General manager </td>
+                                            <td class="column3"> 34, Hofhoek, Poortugaal</td>
+                                            <td class="column4"> +12 345 6789</td>
+                                            <td class="column5"> 0 198736</td>
+                                            <td class="column6"> example@mail.com</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="column1"><a href="#">Michael Tsiklos</a></td>
+                                            <td class="column2"> N/A</td>
+                                            <td class="column3"> </td>
+                                            <td class="column4"> +12 345 6789</td>
+                                            <td class="column5"> 0 198736</td>
+                                            <td class="column6"> example@mail.com</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="column1"><a href="#">Marianna Motoi</a></td>
+                                            <td class="column2"> Marketing manager </td>
+                                            <td class="column3"> 34, Hofhoek, Poortugaal</td>
+                                            <td class="column4"> +12 345 6789</td>
+                                            <td class="column5"> 0 198736</td>
+                                            <td class="column6"> example@mail.com</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <hr style="background: #aaa;">
+            </div>
+            <div class="footer">© Skolarikos Maritime Bureau.</div>
+        </div>
+    </div>
+
+</body>
+
+</html>

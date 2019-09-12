@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>List-Company</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <script src="bootstrap/jquery.min.js"></script>
+    <script src="bootstrap/popper.min.js"></script>
+    <script src="bootstrap/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="css/template-style.css">
+    <link rel="stylesheet" href="css/list-company.css">
+    <script src="js/template-style.js"></script>
+
+
+</head>
+
+<body>
+    <!-- ===================== Header ========================== -->
+    <nav class="navbar navbar-expand-md navbar-dark" style="background-color: #0000003F; border-bottom: 2px solid #8F0000;">
+        <a href="index.html" class="navbar-brand title">SKOLARIKOS MARITIME DATA-BANK</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar3">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+        <div class="navbar-collapse collapse justify-content-stretch" id="navbar3">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="list-fleet.html" style="color: white; font-size: 18px;"><i class="fa fa-fw fa-ship"></i> Fleet</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="list-yacht.html" style="color: white; font-size: 18px;"><i class="fa fa-fw fa-ship"></i> Yacht</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="list-company.html" style="color: white; font-size: 18px;"><i class="fa fa-fw fa-building"></i> Company</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="list-contact.html" style="color: white; font-size: 18px;"><i class="fa fa-fw fa-address-card"></i> Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color: white; font-size: 18px;" id="myLogout"><i class="fa fa-fw fa-user"></i> Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="path"><i class="fa fa-home"></i> / Company / List</div>
+    <div class="container-fluid">
+        <!-- ============== Description ============== -->
+        <div class="container-custom">
+            <h3>Companies</h3>
+            <div class="description">
+                <h5>Companies Around the World Connected with Shipping, including Agents</h5>
+                <p>Here you can search our extensive database and view all companies connected with shipping. This includes all agents, i.e. companies that manage one or more ships. Use the search box on the top right of this screen to quickly locate a record
+                    using our powerful search engine. Alternatively, click the <b>'Show Filters'</b> button to open up the advanced filter panel. Filtering is useful when wanting to reduce the records by range or on a specific field.
+                </p>
+            </div>
+        </div>
+
+
+        <!-- ========== Control ========== -->
+        <div class="container-custom">
+            <div class="control">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Type search terms here..." aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-secondary">Go!</button>
+                                <button class="btn btn-danger">Show Filter</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <button class="btn btn-secondary">Clear</button>
+                        <label class="switch"><input type="checkbox" id="togBtn" onclick="mySwitch()"><div class="slider round"></div></label>
+                    </div>
+                    <div class="col-lg-3">
+                        <p>13519 Results </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- ========== Filter =========== -->
+        <div class="container-custom">
+            <div class="filter">
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <form class="row">
+                            <div class="col-sm-4"><label>Activity :</label></div>
+                            <div class="col-sm-8">
+                                <select class="form-control">
+									<option selected>--Select Port--</option>
+									<option value="">Aarhus</option>
+									<option value="">Alexandria</option>
+									<option value="">Andros</option>
+									<option value="">Barrow</option>
+									<option value="">Boston</option>
+									<option value="">Colon</option>
+									<option value="">Genova</option>
+									<option value="">Dubai</option>
+									<option value="">Vladivostok</option>
+									<option value="">KingStown</option>             
+
+								</select>
+                            </div>
+                        </form>
+
+                        <form class="row" style="margin-top: 10px;">
+                            <div class="col-sm-4"><label>Name :</label></div>
+                            <div class="col-sm-8"><input type="text" class="form-control" /></div>
+                        </form>
+                        <form class="row" style="margin-top: 10px;">
+                            <div class="col-sm-4"><label>Address :</label></div>
+                            <div class="col-sm-8"><input type="text" class="form-control" /></div>
+                        </form>
+                        <form class="row" style="margin-top: 10px;">
+                            <div class="col-sm-4"><label>Address Line1 :</label></div>
+                            <div class="col-sm-8"><input type="text" class="form-control" /></div>
+                        </form>
+                        <form class="row" style="margin-top: 10px;">
+                            <div class="col-sm-4"><label>Address Line2 :</label></div>
+                            <div class="col-sm-8"><input type="text" class="form-control" /></div>
+                        </form>
+                        <form class="row" style="margin-top: 10px;">
+                            <div class="col-sm-4"><label>City :</label></div>
+                            <div class="col-sm-8">
+                                <div class="input-group">
+                                    <select class="form-control">
+										<option selected>--Select Country--</option>
+										<option value="">Albania</option>
+										<option value="">Algeria</option>
+										<option value="">Brazil</option>
+										<option value="">China</option>
+										<option value="">Colombia</option>
+										<option value="">Egypt</option>
+										<option value="">France</option>
+										<option value="">India</option>
+										<option value="">Russia</option>
+										<option value="">Unite State</option>            
+									</select>
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"></span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="--Select City--" />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+
+                    <div class="col-md-6">
+                        <form class="row">
+                            <div class="col-sm-4"><label>Phone :</label></div>
+                            <div class="col-sm-8"><input type="text" class="form-control" /></div>
+                        </form>
+                        <form class="row" style="margin-top: 10px;">
+                            <div class="col-sm-4"><label>Fax :</label></div>
+                            <div class="col-sm-8"><input type="text" class="form-control" /></div>
+                        </form>
+                        <form class="row" style="margin-top: 10px;">
+                            <div class="col-sm-4"><label>Telex :</label></div>
+                            <div class="col-sm-8"><input type="text" class="form-control" /></div>
+                        </form>
+                        <form class="row" style="margin-top: 10px;">
+                            <div class="col-sm-4"><label>Email :</label></div>
+                            <div class="col-sm-8"><input type="text" class="form-control" /></div>
+                        </form>
+                        <form class="row" style="margin-top: 10px;">
+                            <div class="col-sm-4"><label>Website :</label></div>
+                            <div class="col-sm-8"><input type="text" class="form-control" /></div>
+                        </form>
+                        <div class="btn-filter" style="margin-top: 20px;">
+                            <button class="btn btn-danger">Apply Filter</button>
+                            <button class="btn btn-secondary" style="margin-left: 30px;">Clear</button>
+                        </div>
+                    </div>
+
+                </div>
+                <hr>
+            </div>
+        </div>
+
+        <!-- ========= Table ========== -->
+        <div class="container-custom">
+            <div class="wrap-table100" style="display: block;" id="myTable">
+                <div class="table100">
+                    <table clsss="table">
+                        <thead>
+                            <tr>
+                                <th class="column1" style="padding-left: 30px;"></th>
+                                <th class="column2" style="padding-left: 30px;">NAME / ACTIVITIES</th>
+                                <th class="column3" style="padding-left: 30px;">ADDRESS</th>
+                                <th class="column4">PHONE/FAX/TELEX</th>
+                                <th class="column5">EMAIL/WEBSITE</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="column1"><img src="img/company/company1.png"></td>
+                                <td class="column2">
+                                    <a href="view-company.html"> A SHIPS MANAGMENT INC</a><br>
+                                    <span>Various Services, Agent/Managers/Owners, Forwarders/Stevedores</span>
+                                </td>
+                                <td class="column3">
+                                    Chatham Docks Gillingham Docks Chatham, Kent ME4 4SW <br> Chatham eng. <br> U.K.
+                                </td>
+                                <td class="column4">
+                                    0035777787770 <br> 0035725251181
+                                </td>
+                                <td class="column5">
+                                    <a href="#">southampton@ap-group.co.uk</a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="column1"><i class="fa fa-building fa-3x"></i></td>
+                                <td class="column2">
+                                    <a href="#"> 3D MARINE USA INC/PSYDEN (UK) LTD.</a> <br>
+                                    <span>Various Services, Surveyors/Consult/Salvage Ass</span>
+                                </td>
+                                <td class="column3">
+                                    82-92, General Lemanstraat Berchem Antwerp 2600 <br> Antwerp <br> Belgium
+                                </td>
+                                <td class="column4">
+                                    (1326)212100 <br> (1326)319433 <br> 45536 faldoc g
+                                </td>
+                                <td class="column5">
+                                    <a href="#">http://aplus.com.cy</a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="column1"><img src="img/company/company2.png"></td>
+                                <td class="column2">
+                                    <a href="#"> A. MALLIOS - LIGHTING FIXTURES</a><br>
+                                    <span>Spare Parts/Equipment</span>
+                                </td>
+                                <td class="column3">
+                                    41, Tataki & 35, Dousmani Strs Glyfada Athens 166 75 <br> Gibraltar <br>
+                                </td>
+                                <td class="column4">
+                                    (512)354059,354359,354268 <br> (512)351049 <br> 272117 nik
+                                </td>
+                                <td class="column5">
+                                    <a href="#">firm@3dmarine.com</a> <br>
+                                    <a href="#">http://3dmarine.com/</a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="column1"><i class="fa fa-building fa-3x"></i></td>
+                                <td class="column2">
+                                    <a href="#"> A SHIPS MANAGMENT INC</a> <br>
+                                    <span>Various Services, Agent/Managers/Owners, Forwarders/Stevedores</span>
+                                </td>
+                                <td class="column3">
+                                    Chatham Docks Gillingham Docks Chatham, Kent ME4 4SW <br> Chatham eng. <br> U.K.
+                                </td>
+                                <td class="column4">
+                                    0035777787770 <br> 0035725251181
+                                </td>
+                                <td class="column5">
+                                    <a href="#">southampton@ap-group.co.uk</a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="column1"><img src="img/company/company3.png"></td>
+                                <td class="column2">
+                                    <a href="#"> A SHIPS MANAGMENT INC</a> <br>
+                                    <span>Various Services, Agent/Managers/Owners, Forwarders/Stevedores</span>
+                                </td>
+                                <td class="column3">
+                                    41, Tataki & 35, Dousmani Strs Glyfada Athens 166 75 <br> Gibraltar <br>
+                                </td>
+                                <td class="column4">
+                                    (512)354059,354359,354268 <br> (512)351049 <br> 272117 nik
+                                </td>
+                                <td class="column5">
+                                    <a href="#">firm@3dmarine.com</a> <br>
+                                    <a href="#">http://3dmarine.com/</a>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- Table End -->
+
+        <!-- ========== Card ================ -->
+        <div class="container-custom" style="margin-top: 20px;">
+            <div class="wrap-card100">
+                <div class="row">
+                    <div class="col-lg-3 col-sm-6 card100">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="img/company/company1.png">
+                            </div>
+                            <div class="card-name">
+                                <a href="view-company.html">
+                                    <h6>61 COMMUNARS SHIPBUILDING YARD</h6>
+                                </a>
+                                <span>Various Services, Agents/Managers/Owners, Forwarders/Stevedores</span>
+                            </div>
+                            <div class="card-des">
+                                <div class="col-100"><i class="fa fa-envelope"></i> - 7, Drydock Western Ave Western Docks Southampton, Hampshire SO1 OGN Southampton eng. U.K.
+                                </div>
+                                <div class="col-100"><i class="fa fa-fax"></i> - (512)354059,354359,354268 / (512)351049 / 272117 nik
+                                </div>
+                                <div class="col-100"><i class="fa fa-paper-plane"></i> - <a href="#">gmanageroffice@3maj.hr</a></div>
+                                <div class="col-100"><i class="fa fa-mobile"></i> - <a href="#">http://www.ab-maritime.com</a></div>
+                            </div>
+                            <div class="card-button">
+                                <button class="btn">View More</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 card100">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="img/company/company2.png">
+                            </div>
+                            <div class="card-name">
+                                <a href="#">
+                                    <h6>3.MAJ-ASSOCIATED SHIPBUILDING INDUSTRY</h6>
+                                </a>
+                                <span>Various Services, Agents/Managers/Owners, Forwarders/Stevedores</span>
+                            </div>
+                            <div class="card-des">
+                                <div class="col-100"><i class="fa fa-envelope"></i> - 7, Drydock Western Ave Western Docks Southampton, Hampshire SO1 OGN Southampton eng. U.K.
+                                </div>
+                                <div class="col-100"><i class="fa fa-fax"></i> - (512)354059,354359,354268 / (512)351049 / 272117 nik
+                                </div>
+                                <div class="col-100"><i class="fa fa-paper-plane"></i> - <a href="#">gmanageroffice@3maj.hr</a></div>
+                                <div class="col-100"><i class="fa fa-mobile"></i> - <a href="#">http://www.ab-maritime.com</a></div>
+                            </div>
+
+                            <div class="card-button">
+                                <button class="btn">View More</button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 card100">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="img/company/company3.png">
+                            </div>
+                            <div class="card-name">
+                                <a href="#">
+                                    <h6>A & P HOLDINGS (SOUTHAMPTON) LTD.</h6>
+                                </a>
+                                <span>Various Services, Agents/Managers/Owners, Forwarders/Stevedores</span>
+                            </div>
+                            <div class="card-des">
+                                <div class="col-100"><i class="fa fa-envelope"></i> - 7, Drydock Western Ave Western Docks Southampton, Hampshire SO1 OGN Southampton eng. U.K.
+                                </div>
+                                <div class="col-100"><i class="fa fa-fax"></i> - (512)354059,354359,354268 / (512)351049 / 272117 nik
+                                </div>
+                                <div class="col-100"><i class="fa fa-paper-plane"></i> - <a href="#">gmanageroffice@3maj.hr</a></div>
+                                <div class="col-100"><i class="fa fa-mobile"></i> - <a href="#">http://www.ab-maritime.com</a></div>
+                            </div>
+
+                            <div class="card-button">
+                                <button class="btn">View More</button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 card100">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="img/company/default.png">
+                            </div>
+                            <div class="card-name">
+                                <a href="#">
+                                    <h6>A. MALLIOS-LIGHTING FIXTURES </h6>
+                                </a>
+                                <span>Various Services, Agents/Managers/Owners, Forwarders/Stevedores</span>
+                            </div>
+                            <div class="card-des">
+                                <div class="col-100"><i class="fa fa-envelope"></i> - 7, Drydock Western Ave Western Docks Southampton, Hampshire SO1 OGN Southampton eng. U.K.
+                                </div>
+                                <div class="col-100"><i class="fa fa-fax"></i> - (512)354059,354359,354268 / (512)351049 / 272117 nik
+                                </div>
+                                <div class="col-100"><i class="fa fa-paper-plane"></i> - <a href="#">gmanageroffice@3maj.hr</a></div>
+                                <div class="col-100"><i class="fa fa-mobile"></i> - <a href="#">http://www.ab-maritime.com</a></div>
+
+                            </div>
+                            <div class="card-button">
+                                <button class="btn">View More</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-lg-3 col-sm-6 card100">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="img/company/company1.png">
+                            </div>
+                            <div class="card-name">
+                                <a href="#">
+                                    <h6>61 COMMUNARS SHIPBUILDING YARD</h6>
+                                </a>
+                                <span>Various Services, Agents/Managers/Owners, Forwarders/Stevedores</span>
+                            </div>
+                            <div class="card-des">
+                                <div class="col-100"><i class="fa fa-envelope"></i> - 7, Drydock Western Ave Western Docks Southampton, Hampshire SO1 OGN Southampton eng. U.K.
+                                </div>
+                                <div class="col-100"><i class="fa fa-fax"></i> - (512)354059,354359,354268 / (512)351049 / 272117 nik
+                                </div>
+                                <div class="col-100"><i class="fa fa-paper-plane"></i> - <a href="#">gmanageroffice@3maj.hr</a></div>
+                                <div class="col-100"><i class="fa fa-mobile"></i> - <a href="#">http://www.ab-maritime.com</a></div>
+
+                            </div>
+                            <div class="card-button">
+                                <button class="btn">View More</button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 card100">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="img/company/company2.png">
+                            </div>
+                            <div class="card-name">
+                                <a href="#">
+                                    <h6>3.MAJ-ASSOCIATED SHIPBUILDING INDUSTRY</h6>
+                                </a>
+                                <span>Various Services, Agents/Managers/Owners, Forwarders/Stevedores</span>
+                            </div>
+                            <div class="card-des">
+                                <div class="col-100"><i class="fa fa-envelope"></i> - 7, Drydock Western Ave Western Docks Southampton, Hampshire SO1 OGN Southampton eng. U.K.
+                                </div>
+                                <div class="col-100"><i class="fa fa-fax"></i> - (512)354059,354359,354268 / (512)351049 / 272117 nik
+                                </div>
+                                <div class="col-100"><i class="fa fa-paper-plane"></i> - <a href="#">gmanageroffice@3maj.hr</a></div>
+                                <div class="col-100"><i class="fa fa-mobile"></i> - <a href="#">http://www.ab-maritime.com</a></div>
+
+                            </div>
+                            <div class="card-button">
+                                <button class="btn">View More</button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 card100">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="img/company/company3.png">
+                            </div>
+                            <div class="card-name">
+                                <a href="#">
+                                    <h6>A & P HOLDINGS (SOUTHAMPTON) LTD.</h6>
+                                </a>
+                                <span>Various Services, Agents/Managers/Owners, Forwarders/Stevedores</span>
+                            </div>
+                            <div class="card-des">
+                                <div class="col-100"><i class="fa fa-envelope"></i> - 7, Drydock Western Ave Western Docks Southampton, Hampshire SO1 OGN Southampton eng. U.K.
+                                </div>
+                                <div class="col-100"><i class="fa fa-fax"></i> - (512)354059,354359,354268 / (512)351049 / 272117 nik
+                                </div>
+                                <div class="col-100"><i class="fa fa-paper-plane"></i> - <a href="#">gmanageroffice@3maj.hr</a></div>
+                                <div class="col-100"><i class="fa fa-mobile"></i> - <a href="#">http://www.ab-maritime.com</a></div>
+
+                            </div>
+                            <div class="card-button">
+                                <button class="btn">View More</button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 card100">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="img/company/default.png">
+                            </div>
+                            <div class="card-name">
+                                <a href="#">
+                                    <h6>A. MALLIOS-LIGHTING FIXTURES </h6>
+                                </a>
+                                <span>Various Services, Agents/Managers/Owners, Forwarders/Stevedores</span>
+                            </div>
+                            <div class="card-des">
+                                <div class="col-100"><i class="fa fa-envelope"></i> - 7, Drydock Western Ave Western Docks Southampton, Hampshire SO1 OGN Southampton eng. U.K.
+                                </div>
+                                <div class="col-100"><i class="fa fa-fax"></i> - (512)354059,354359,354268 / (512)351049 / 272117 nik
+                                </div>
+                                <div class="col-100"><i class="fa fa-paper-plane"></i> - <a href="#">gmanageroffice@3maj.hr</a></div>
+                                <div class="col-100"><i class="fa fa-mobile"></i> - <a href="#">http://www.ab-maritime.com</a></div>
+
+                            </div>
+                            <div class="card-button">
+                                <button class="btn">View More</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+
+    <!-- Container-End -->
+
+</body>
+
+</html>

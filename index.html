@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>Skolarikos Databank</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <script src="bootstrap/jquery.min.js"></script>
+    <script src="bootstrap/popper.min.js"></script>
+    <script src="bootstrap/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="css/template-style.css">
+    <link rel="stylesheet" href="css/main-style.css">
+
+    <script src="js/template-style.js"></script>
+
+
+
+</head>
+
+<body>
+    <!-- ===================== Header ========================== -->
+    <nav class="navbar navbar-expand-md navbar-dark" style="background-color: #0000003F; border-bottom: 2px solid #8F0000;">
+        <a href="/" class="navbar-brand title">SKOLARIKOS MARITIME DATA-BANK</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar3">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+        <div class="navbar-collapse collapse justify-content-stretch" id="navbar3">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="list-fleet.html" style="color: white; font-size: 18px;"><i class="fa fa-fw fa-ship"></i> Fleet</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="list-yacht.html" style="color: white; font-size: 18px;"><i class="fa fa-fw fa-ship"></i> Yacht</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="list-company.html" style="color: white; font-size: 18px;"><i class="fa fa-fw fa-building"></i> Company</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="list-contact.html" style="color: white; font-size: 18px;"><i class="fa fa-fw fa-address-card"></i> Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color: white; font-size: 18px;" id="myLogin"><i class="fa fa-fw fa-user"></i> Login</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row" style="padding-top: 30px; color: #fff;">
+            <div class="col-sm-1" style="padding-right: 0px;"><i class="fa fa-database fa-2x"></i></div>
+            <div class="col-sm-7">
+                <h3>Welcome to Skolarikos Maritime Database</h3>
+                <p>Here you can find our updated database. You can browse our alphabetical lists or search for something specific.</p>
+            </div>
+
+            <div class="col-sm-3 header">
+                <input type="text" placeholder="Search.." name="search">
+
+                <button type="submit"><i class="fa fa-search"></i></button>
+
+            </div>
+            <div class="col-sm-1"></div>
+        </div>
+    </div>
+
+    <!-- ============ Counter =========== -->
+    <section class="member_counter">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single_member_counter">
+                        <span class="">13520</span>
+                        <h4>All Fleets</h4>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single_member_counter">
+                        <span class="">13520</span>
+                        <h4> All Yachts</h4>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single_member_counter">
+                        <span class="">26568</span>
+                        <h4>All Companies</h4>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single_member_counter">
+                        <span class="">13127</span>
+                        <h4>All Contacts</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Container (Contact Section) -->
+    <div class="container-fluid footing-section">
+        <div class="row">
+            <div class="col-sm-5">
+                <p>Contact us and we'll get back to you within 24 hours.</p>
+                <p><span class="fa fa-map-marker fa-lg fa-fw"></span> 29, Harley Str, Suite B, London W1G9QR</p>
+                <p><span class="fa fa-phone fa-lg fa-fw"></span> +30 210 4180200 - +30 210 4180220</p>
+                <p><span class="fa fa-fax fa-lg fa-fw"></span> +30 210 4286350</p>
+                <p><span class="fa fa-paper-plane fa-lg fa-fw"></span> info@skolarikos.gr</p>
+                <p><span class="fa fa-mobile fa-lg fa-fw"></span> www.skolarikos.com</p>
+
+            </div>
+            <div class="col-sm-7">
+                <div class="row">
+                    <div class="col-sm-6 form-group">
+                        <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                    </div>
+                    <div class="col-sm-6 form-group">
+                        <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                    </div>
+                </div>
+                <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+                <div class="row">
+                    <div class="col-sm-12 form-group">
+                        <button class="btn btn-danger pull-right" type="submit" style="width: 100px;">
+							<i class="fa fa-paper-plane-o" style="padding-right: 10px;"></i>Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <!-- ================== Modal Dialog (Log in & Sign up)================================= -->
+    <!-- Modal Log in-->
+    <div class="modal fade" id="myModal_Login" role="dialog">
+        <div class="modal-dialog modal-box">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header" style="padding:35px 50px;">
+                    <h4><i class="fa fa-unlock-alt fa-lg fa-fw"></i> Log in</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body" style="padding:40px 50px 20px 50px;">
+                    <form role="form">
+                        <div class="form-group">
+                            <label for="name"><i class="fa fa-user fa-lg fa-fw"></i> Name</label>
+                            <input type="text" class="form-control" id="fullname" placeholder="Enter name">
+                        </div>
+                        <div class="form-group">
+                            <label for="psw"><i class="fa fa-eye fa-lg fa-fw"></i> Password</label>
+                            <input type="password" class="form-control" id="psw" placeholder="Enter password">
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="" style="margin-right: 10px">Remember me</label>
+                        </div>
+                        <button type="submit" class="btn btn-success btn-block"><i class="fa fa-key fa-lg fa-fw"></i> Log in</button>
+                    </form>
+                </div>
+                <div class="footer">
+                    <div class="form-group">
+                        <p>Forget <a href="#">Password?</a></p>
+                        <p>Not a member? <a href="#" id="mySignup">Sign up</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Sign up-->
+    <div class="modal fade" id="myModal_Signup" role="dialog">
+        <div class="modal-dialog modal-box">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header" style="padding:35px 50px;">
+                    <h4><i class="fa fa-lock fa-lg fa-fw"></i> Sign up</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body" style="padding:40px 50px 20px 50px;">
+                    <form role="form">
+                        <div class="form-group">
+                            <label for="usrname"><i class="fa fa-user fa-lg fa-fw"></i>User Name</label>
+                            <input type="text" class="form-control" id="usrname" placeholder="Enter username">
+                        </div>
+                        <div class="form-group">
+                            <label for="usrmail"><i class="fa fa-envelope fa-lg fa-fw"></i>Email</label>
+                            <input type="text" class="form-control" id="usrmail" placeholder="Enter email">
+                        </div>
+                        <div class="form-group">
+                            <label for="psw1"><i class="fa fa-eye fa-lg fa-fw"></i>New Password</label>
+                            <input type="password" class="form-control" id="psw1" placeholder="Enter password">
+                        </div>
+                        <div class="form-group">
+                            <label for="psw2"><i class="fa fa-shield fa-lg fa-fw"></i>Confirm Password</label>
+                            <input type="password" class="form-control" id="psw2" placeholder="Confirm password">
+                        </div>
+                        <button type="submit" class="btn btn-success btn-block"><i class="fa fa-key fa-lg fa-fw"></i> Sign up</button>
+                    </form>
+                </div>
+                <div class="footer">
+                    <div class="form-group">
+                        <a href="#" id="goLogin">I already have a membership.</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

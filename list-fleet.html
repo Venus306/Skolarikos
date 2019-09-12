@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>List-Fleet</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <script src="bootstrap/jquery.min.js"></script>
+    <script src="bootstrap/popper.min.js"></script>
+    <script src="bootstrap/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="css/template-style.css">
+    <link rel="stylesheet" href="css/list-fleet.css">
+
+    <script src="js/template-style.js"></script>
+
+
+</head>
+
+<body>
+    <!-- ===================== Header ========================== -->
+    <nav class="navbar navbar-expand-md navbar-dark" style="background-color: #0000003F; border-bottom: 2px solid #8F0000;">
+        <a href="index.html" class="navbar-brand title">SKOLARIKOS MARITIME DATA-BANK</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar3">
+      		<span class="navbar-toggler-icon"></span>
+    	</button>
+        <div class="navbar-collapse collapse justify-content-stretch" id="navbar3">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="list-fleet.html" style="color: white; font-size: 18px;"><i class="fa fa-fw fa-ship"></i> Fleet</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="list-yacht.html" style="color: white; font-size: 18px;"><i class="fa fa-fw fa-ship"></i> Yacht</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="list-company.html" style="color: white; font-size: 18px;"><i class="fa fa-fw fa-building"></i> Company</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="list-contact.html" style="color: white; font-size: 18px;"><i class="fa fa-fw fa-address-card"></i> Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color: white; font-size: 18px;" id="myLogout"><i class="fa fa-fw fa-user"></i> Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="path"><i class="fa fa-home"></i> / Fleet / List</div>
+    <div class="container-fluid">
+        <!-- ============== Description ============== -->
+        <div class="container-custom">
+            <h3>Fleet</h3>
+            <div class="description">
+                <h5>Hellenic and European Merchant Interest Fleet’s Technical & Administration details</h5>
+                <p>Here you can search our extensive database and view technical and administration details of every ship is our database. Our database covers both Hellenic and European Merchant Interest and is updated regularly. Use the search box on the
+                    top right of this screen to quickly locate a record using our powerful search engine. Alternatively, click the <b>'Show Filters'</b> button to open up the advanced filter panel. Filtering is useful when wanting to reduce the records
+                    by range or on a specific field.
+                </p>
+            </div>
+        </div>
+
+        <!-- ========== Control ========== -->
+        <div class="container-custom">
+            <div class="control">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Type search terms here..." aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-secondary">Go!</button>
+                                <button class="btn btn-danger">Show Filter</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <button class="btn btn-secondary">Clear</button>
+                        <label class="switch"><input type="checkbox" id="togBtn" onclick="mySwitch()"><div class="slider round"></div></label>
+                    </div>
+                    <div class="col-lg-3">
+                        <p>13519 Results </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ========== Filter =========== -->
+        <div class="container-custom">
+            <div class="filter">
+                <hr>
+                <div class="row">
+                    <div class="col-md-4">
+                        <form>
+                            <label>Name</label>
+                            <input type="text" class="form-control" />
+                        </form>
+                    </div>
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4">
+                        <form>
+                            <label>Directory</label>
+                            <input type="text" class="form-control" />
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <form>
+                            <label>XName</label>
+                            <input type="text" class="form-control" />
+                        </form>
+                        <form>
+                            <label>Flag</label>
+                            <select class="form-control">
+								<option selected>--Select Flag--</option>
+								<option value="">Albania</option>
+								<option value="">Algeria</option>
+								<option value="">Brazil</option>
+								<option value="">China</option>
+								<option value="">Colombia</option>
+								<option value="">Egypt</option>
+								<option value="">France</option>
+								<option value="">India</option>
+								<option value="">Russia</option>
+								<option value="">Unite State</option>             
+								
+
+							</select>
+
+                        </form>
+                        <form>
+                            <label>Port of Registry</label>
+                            <select class="form-control">
+								<option selected>--Select Port--</option>
+								<option value="">Aarhus</option>
+								<option value="">Alexandria</option>
+								<option value="">Andros</option>
+								<option value="">Barrow</option>
+								<option value="">Boston</option>
+								<option value="">Colon</option>
+								<option value="">Genova</option>
+								<option value="">Dubai</option>
+								<option value="">Vladivostok</option>
+								<option value="">KingStown</option>             
+
+							</select>
+                        </form>
+                        <form>
+                            <label>Registration Number</label>
+                            <input type="text" class="form-control" />
+                        </form>
+                        <form>
+                            <label>Signal</label>
+                            <input type="text" class="form-control" />
+                        </form>
+                        <form>
+                            <label>Satellite Com.</label>
+                            <input type="text" class="form-control" />
+                        </form>
+                    </div>
+
+                    <div class="col-md-4">
+                        <form>
+                            <label>Type</label>
+                            <input type="text" class="form-control" />
+                        </form>
+                        <form>
+                            <label>IMO</label>
+                            <input type="text" class="form-control" />
+                        </form>
+                        <form>
+                            <label>Class</label>
+                            <input type="text" class="form-control" />
+                        </form>
+                        <form>
+                            <label>M.E.P.A.</label>
+                            <input type="text" class="form-control" />
+                        </form>
+                        <form>
+                            <label>Gross</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" />
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">-</span>
+                                </div>
+                                <input type="text" class="form-control" />
+                            </div>
+                        </form>
+                        <form>
+                            <label>Net</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" />
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">-</span>
+                                </div>
+                                <input type="text" class="form-control" />
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="col-md-4">
+                        <form>
+                            <label>D.W.</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" />
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">-</span>
+                                </div>
+                                <input type="text" class="form-control" />
+                            </div>
+                        </form>
+                        <form>
+                            <label>Built</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" />
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">-</span>
+                                </div>
+                                <input type="text" class="form-control" />
+                            </div>
+                        </form>
+                        <form>
+                            <label>Length</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" />
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">-</span>
+                                </div>
+                                <input type="text" class="form-control" />
+                            </div>
+                        </form>
+                        <form>
+                            <label>Breadth</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" />
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">-</span>
+                                </div>
+                                <input type="text" class="form-control" />
+                            </div>
+                        </form>
+                        <form>
+                            <label>Depth Moulded(m)</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" />
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">-</span>
+                                </div>
+                                <input type="text" class="form-control" />
+                            </div>
+                        </form>
+                        <form>
+                            <label>Draught</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" />
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">-</span>
+                                </div>
+                                <input type="text" class="form-control" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <br>
+                <hr>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <form>
+                            <label>Manager</label>
+                            <input type="text" class="form-control" />
+                        </form>
+                    </div>
+                    <div class="col-md-4">
+                        <form>
+                            <label>Owning Company</label>
+                            <input type="text" class="form-control" />
+                        </form>
+                    </div>
+                    <div class="col-md-4">
+                        <form>
+                            <label>Agent</label>
+                            <input type="text" class="form-control" />
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <form>
+                            <label>Port</label>
+                            <select class="form-control">
+								<option selected>--Select Port--</option>
+								<option value="">Aarhus</option>
+								<option value="">Alexandria</option>
+								<option value="">Andros</option>
+								<option value="">Barrow</option>
+								<option value="">Boston</option>
+								<option value="">Colon</option>
+								<option value="">Genova</option>
+								<option value="">Dubai</option>
+								<option value="">Vladivostok</option>
+								<option value="">KingStown</option>             
+							</select>
+                        </form>
+                    </div>
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4">
+                        <form>
+                            <label>City</label>
+                            <div class="input-group">
+                                <select class="form-control">
+									<option selected>--Select Country--</option>
+									<option value="">Albania</option>
+									<option value="">Algeria</option>
+									<option value="">Brazil</option>
+									<option value="">China</option>
+									<option value="">Colombia</option>
+									<option value="">Egypt</option>
+									<option value="">France</option>
+									<option value="">India</option>
+									<option value="">Russia</option>
+									<option value="">Unite State</option>            
+								</select>
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"></span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="--Select City--" />
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+
+                <br>
+                <hr>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <form>
+                            <label>Ship Builders</label>
+                            <input type="text" class="form-control" />
+                        </form>
+                        <form>
+                            <label>Hull No</label>
+                            <input type="text" class="form-control" />
+                        </form>
+                    </div>
+                    <div class="col-md-4">
+                        <form>
+                            <label>Engine Builders</label>
+                            <input type="text" class="form-control" />
+                        </form>
+                        <form>
+                            <label>ENGINE DESIGN/TYPE</label>
+                            <input type="text" class="form-control" />
+                        </form>
+
+
+                    </div>
+                    <div class="col-md-4">
+                        <form>
+                            <label>Speed</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" />
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">-</span>
+                                </div>
+                                <input type="text" class="form-control" />
+                            </div>
+                        </form>
+                        <form>
+                            <label>Horse Power</label>
+                            <input type="text" class="form-control" />
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <form>
+                            <label>Decks - TANKS HOLD/HATCHES (Length x Width) Engine Room Position</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" />
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">-</span>
+                                </div>
+                                <input type="text" class="form-control" />
+                            </div>
+                        </form>
+                        <form>
+                            <label>Hecls COW IGS SBT D/B D/S</label>
+                            <input type="text" class="form-control" />
+                        </form>
+
+                    </div>
+                    <div class="col-md-4">
+                        <form>
+                            <label>WINCHES CRANES DERRICKS (Safe Working Load)</label>
+                            <input type="text" class="form-control" />
+                        </form>
+                        <form>
+                            <label>GRAIN BALE LIQUID ORE REFR</label>
+                            <input type="text" class="form-control" />
+                        </form>
+                    </div>
+                    <div class="col-md-4">
+                        <form>
+                            <label>No OF AUX. DIESEL GENERATORS x DESIGN/TYPE</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" />
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">-</span>
+                                </div>
+                                <input type="text" class="form-control" />
+                            </div>
+                        </form>
+                        <form>
+                            <label>Generator</label>
+                            <input type="text" class="form-control" />
+                        </form>
+                    </div>
+                </div>
+                <br>
+                <hr>
+                <div class="btn-filter">
+                    <button class="btn btn-danger">Apply Filter</button>
+                    <button class="btn btn-secondary" style="margin-left: 30px;">Clear</button>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- ========= Table ========== -->
+        <div class="container-custom">
+            <div class="wrap-table100" style="display: block;" id="myTable">
+                <div class="table100">
+                    <table clsss="table">
+                        <thead>
+                            <tr>
+                                <th class="column1" style="padding-left: 0px;"></th>
+                                <th class="column2" style="padding-left: 30px;">SHIP NAME</th>
+                                <th class="column3">TYPE</th>
+                                <th class="column4">BUILT</th>
+                                <th class="column5">FLAG</th>
+                                <th class="column6">GROSS</th>
+                                <th class="column7">D.W.</th>
+                                <th class="column8">I.M.O.</th>
+                                <th class="column9" style="padding-left: 50px;">AGENTS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="column1"><img src="img/fleet.png"></td>
+                                <td class="column2">
+                                    <a href="view-fleet.html">A.B.AMSTERDAM</a>
+                                </td>
+                                <td class="column3">CSH</td>
+                                <td class="column4">2019</td>
+                                <td class="column5"><img src="img/flags/ar.png">ANTG</td>
+                                <td class="column6">18199.00</td>
+                                <td class="column7">23831.00</td>
+                                <td class="column8">9354674</td>
+                                <td class="column9">
+                                    <a href="view-company.html">WESSELS BEREEDERUNGSGESELLSCHAFT MBH</a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="column1"><img src="img/fleet.png"></td>
+                                <td class="column2">
+                                    <a href="#">A.B.AMSTERDAM</a>
+                                </td>
+                                <td class="column3">CSH</td>
+                                <td class="column4">2019</td>
+                                <td class="column5"><img src="img/flags/bd.png">ANTG</td>
+                                <td class="column6">18199.00</td>
+                                <td class="column7">23831.00</td>
+                                <td class="column8">9354674</td>
+                                <td class="column9">
+                                    <a href="#">WESSELS BEREEDERUNGSGESELLSCHAFT MBH</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="column1"><img src="img/fleet.png"></td>
+                                <td class="column2">
+                                    <a href="#">A.B.AMSTERDAM</a>
+                                </td>
+                                <td class="column3">CSH</td>
+                                <td class="column4">2019</td>
+                                <td class="column5"><img src="img/flags/cu.png">ANTG</td>
+                                <td class="column6">18199.00</td>
+                                <td class="column7">23831.00</td>
+                                <td class="column8">9354674</td>
+                                <td class="column9">
+                                    <a href="#">WESSELS BEREEDERUNGSGESELLSCHAFT MBH</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="column1"><img src="img/fleet.png"></td>
+                                <td class="column2">
+                                    <a href="#">A.B.AMSTERDAM</a>
+                                </td>
+                                <td class="column3">CSH</td>
+                                <td class="column4">2019</td>
+                                <td class="column5"><img src="img/flags/ge.png">ANTG</td>
+                                <td class="column6">18199.00</td>
+                                <td class="column7">23831.00</td>
+                                <td class="column8">9354674</td>
+                                <td class="column9">
+                                    <a href="#">WESSELS BEREEDERUNGSGESELLSCHAFT MBH</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="column1"><img src="img/fleet.png"></td>
+                                <td class="column2">
+                                    <a href="#">A.B.AMSTERDAM</a>
+                                </td>
+                                <td class="column3">CSH</td>
+                                <td class="column4">2019</td>
+                                <td class="column5"><img src="img/flags/tg.png">ANTG</td>
+                                <td class="column6">18199.00</td>
+                                <td class="column7">23831.00</td>
+                                <td class="column8">9354674</td>
+                                <td class="column9">
+                                    <a href="#">WESSELS BEREEDERUNGSGESELLSCHAFT MBH</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- Table End -->
+
+        <!-- ========== Card ================ -->
+        <div class="container-custom" style="margin-top: 20px;">
+            <div class="wrap-card100">
+
+                <div class="row">
+                    <div class="col-lg-3 col-sm-6 card100">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="img/fleet/fleet1.jpg">
+                            </div>
+                            <div class="card-name">
+                                <a href="view-fleet.html">
+                                    <h5>A.B.AMSTERDAM</h5>
+                                </a>
+                                <a href="view-company.html">
+                                    <p>WESSELS BEREEDERUNGSGESELLSCHAFT MBH</p>
+                                </a>
+                            </div>
+                            <div class="card-des">
+                                <div class="col-50"><i class="fa fa-ship"></i> - CT</div>
+                                <div class="col-50"><i class="fa fa-calendar"></i> - 2019</div>
+                                <div class="col-50"><i class="fa fa-flag"></i> - MALT</div>
+                                <div class="col-50"><i class="fa fa-anchor"></i> - 4064.00</div>
+                                <div class="col-50"><i class="fa fa-warning"></i> - 5873.00</div>
+                                <div class="col-50"><i class="fa fa-gear"></i> - 9272565</div>
+
+                            </div>
+                            <div class="card-button">
+                                <button class="btn">View More</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 card100">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="img/fleet/fleet2.jpg">
+                            </div>
+                            <div class="card-name">
+                                <a href="#">
+                                    <h5>A.B.AMSTERDAM</h5>
+                                </a>
+                                <a href="#">
+                                    <p>WESSELS BEREEDERUNGSGESELLSCHAFT MBH</p>
+                                </a>
+                            </div>
+                            <div class="card-des">
+                                <div class="col-50"><i class="fa fa-ship"></i> - CT</div>
+                                <div class="col-50"><i class="fa fa-calendar"></i> - 2019</div>
+                                <div class="col-50"><i class="fa fa-flag"></i> - MALT</div>
+                                <div class="col-50"><i class="fa fa-anchor"></i> - 4064.00</div>
+                                <div class="col-50"><i class="fa fa-warning"></i> - 5873.00</div>
+                                <div class="col-50"><i class="fa fa-gear"></i> - 9272565</div>
+
+                            </div>
+                            <div class="card-button">
+                                <button class="btn">View More</button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 card100">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="img/fleet/fleet3.jpg">
+                            </div>
+                            <div class="card-name">
+                                <a href="#">
+                                    <h5>A.B.AMSTERDAM</h5>
+                                </a>
+                                <a href="#">
+                                    <p>WESSELS BEREEDERUNGSGESELLSCHAFT MBH</p>
+                                </a>
+                            </div>
+                            <div class="card-des">
+                                <div class="col-50"><i class="fa fa-ship"></i> - CT</div>
+                                <div class="col-50"><i class="fa fa-calendar"></i> - 2019</div>
+                                <div class="col-50"><i class="fa fa-flag"></i> - MALT</div>
+                                <div class="col-50"><i class="fa fa-anchor"></i> - 4064.00</div>
+                                <div class="col-50"><i class="fa fa-warning"></i> - 5873.00</div>
+                                <div class="col-50"><i class="fa fa-gear"></i> - 9272565</div>
+
+                            </div>
+                            <div class="card-button">
+                                <button class="btn">View More</button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 card100">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="img/fleet/fleet4.jpg">
+                            </div>
+                            <div class="card-name">
+                                <a href="#">
+                                    <h5>A.B.AMSTERDAM</h5>
+                                </a>
+                                <a href="#">
+                                    <p>WESSELS BEREEDERUNGSGESELLSCHAFT MBH</p>
+                                </a>
+                            </div>
+                            <div class="card-des">
+                                <div class="col-50"><i class="fa fa-ship"></i> - CT</div>
+                                <div class="col-50"><i class="fa fa-calendar"></i> - 2019</div>
+                                <div class="col-50"><i class="fa fa-flag"></i> - MALT</div>
+                                <div class="col-50"><i class="fa fa-anchor"></i> - 4064.00</div>
+                                <div class="col-50"><i class="fa fa-warning"></i> - 5873.00</div>
+                                <div class="col-50"><i class="fa fa-gear"></i> - 9272565</div>
+
+                            </div>
+                            <div class="card-button">
+                                <button class="btn">View More</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-lg-3 col-sm-6 card100">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="img/fleet/fleet1.jpg">
+                            </div>
+                            <div class="card-name">
+                                <a href="#">
+                                    <h5>A.B.AMSTERDAM</h5>
+                                </a>
+                                <a href="#">
+                                    <p>WESSELS BEREEDERUNGSGESELLSCHAFT MBH</p>
+                                </a>
+                            </div>
+                            <div class="card-des">
+                                <div class="col-50"><i class="fa fa-ship"></i> - CT</div>
+                                <div class="col-50"><i class="fa fa-calendar"></i> - 2019</div>
+                                <div class="col-50"><i class="fa fa-flag"></i> - MALT</div>
+                                <div class="col-50"><i class="fa fa-anchor"></i> - 4064.00</div>
+                                <div class="col-50"><i class="fa fa-warning"></i> - 5873.00</div>
+                                <div class="col-50"><i class="fa fa-gear"></i> - 9272565</div>
+
+                            </div>
+                            <div class="card-button">
+                                <button class="btn">View More</button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 card100">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="img/fleet/fleet2.jpg">
+                            </div>
+                            <div class="card-name">
+                                <a href="#">
+                                    <h5>A.B.AMSTERDAM</h5>
+                                </a>
+                                <a href="#">
+                                    <p>WESSELS BEREEDERUNGSGESELLSCHAFT MBH</p>
+                                </a>
+                            </div>
+                            <div class="card-des">
+                                <div class="col-50"><i class="fa fa-ship"></i> - CT</div>
+                                <div class="col-50"><i class="fa fa-calendar"></i> - 2019</div>
+                                <div class="col-50"><i class="fa fa-flag"></i> - MALT</div>
+                                <div class="col-50"><i class="fa fa-anchor"></i> - 4064.00</div>
+                                <div class="col-50"><i class="fa fa-warning"></i> - 5873.00</div>
+                                <div class="col-50"><i class="fa fa-gear"></i> - 9272565</div>
+
+                            </div>
+                            <div class="card-button">
+                                <button class="btn">View More</button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 card100">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="img/fleet/fleet3.jpg">
+                            </div>
+                            <div class="card-name">
+                                <a href="#">
+                                    <h5>A.B.AMSTERDAM</h5>
+                                </a>
+                                <a href="#">
+                                    <p>WESSELS BEREEDERUNGSGESELLSCHAFT MBH</p>
+                                </a>
+                            </div>
+                            <div class="card-des">
+                                <div class="col-50"><i class="fa fa-ship"></i> - CT</div>
+                                <div class="col-50"><i class="fa fa-calendar"></i> - 2019</div>
+                                <div class="col-50"><i class="fa fa-flag"></i> - MALT</div>
+                                <div class="col-50"><i class="fa fa-anchor"></i> - 4064.00</div>
+                                <div class="col-50"><i class="fa fa-warning"></i> - 5873.00</div>
+                                <div class="col-50"><i class="fa fa-gear"></i> - 9272565</div>
+
+                            </div>
+                            <div class="card-button">
+                                <button class="btn">View More</button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 card100">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="img/fleet/fleet4.jpg">
+                            </div>
+                            <div class="card-name">
+                                <a href="#">
+                                    <h5>A.B.AMSTERDAM</h5>
+                                </a>
+                                <a href="#">
+                                    <p>WESSELS BEREEDERUNGSGESELLSCHAFT MBH</p>
+                                </a>
+                            </div>
+                            <div class="card-des">
+                                <div class="col-50"><i class="fa fa-ship"></i> - CT</div>
+                                <div class="col-50"><i class="fa fa-calendar"></i> - 2019</div>
+                                <div class="col-50"><i class="fa fa-flag"></i> - MALT</div>
+                                <div class="col-50"><i class="fa fa-anchor"></i> - 4064.00</div>
+                                <div class="col-50"><i class="fa fa-warning"></i> - 5873.00</div>
+                                <div class="col-50"><i class="fa fa-gear"></i> - 9272565</div>
+
+                            </div>
+                            <div class="card-button">
+                                <button class="btn">View More</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <!-- Container End  -->
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>
